@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM | HISTORY</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+
+  <ul class="indianRuler">
+    <li>Chandragupta Maurya (321–297 BCE)</li>
+    <li>Bindusara (297–273 BCE)</li>
+    <li>Ashoka the Great (268–232 BCE)</li>
+    <li>Chandragupta I (320–335 CE)</li>
+    <li>Samudragupta (335–375 CE)</li>
+    <li>Chandragupta II (375–415 CE)</li>
+    <li>Harsha (606–647 CE)</li>
+    <li>Raja Raja Chola I (985–1014 CE)</li>
+    <li>Akbar (1556–1605 CE)</li>
+    <li>Shivaji Maharaj (1674–1680 CE)</li>
+  </ul>
+  
+</body>
+<script>
+  // Add a ruler
+  function addRuler(rulerName){
+    const listRuler = document.createElement('li');
+    listRuler.innerHTML = `${rulerName}`;
+    document.querySelector('.indianRuler').appendChild(listRuler);
+  }
+  addRuler("Rana Kumbha (Mewar)");
+
+  // Optimized approach (text node)
+  function addOptiRuler(rulerName1){
+    const listRuler1 = document.createElement('li');
+    listRuler1.appendChild(document.createTextNode(rulerName1));
+    document.querySelector('.indianRuler').appendChild(listRuler1);
+  }
+  addOptiRuler("Rao Jodha (founder of Jodhpur)");
+
+  // Edit 2nd ruler
+  const secondRuler = document.querySelector('.indianRuler li:nth-child(2)');
+  const newRuler = document.createElement('li');
+  newRuler.appendChild(document.createTextNode("Bindusara (Edited Entry)"));
+  secondRuler.replaceWith(newRuler);
+
+  //Remove
+  const lastRuler = document.querySelector('li:last-child')
+  lastRuler.remove()
+</script>
+
+</html>
