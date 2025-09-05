@@ -34,8 +34,11 @@ I created this repo to:
 ```bash
 javascript-playground/
 │
-├── basics/          # Variables, functions, loops, arrays
-├── es6-features/    # Arrow functions, destructuring, promises
-├── challenges/      # Small coding challenges
-├── projects/        # Mini JavaScript projects
-└── README.md
+Javascript ~Chai aur code
+│── 01_basics/
+│── 02_basics/
+│── 03_basics/
+│── 04_controlFlow/
+│── 05_Iterations/
+│── Filtermaps and Reduce/
+│── README.md
